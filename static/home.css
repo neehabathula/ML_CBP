@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+body{
+  color: white;
+}
+.container-fluid{
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://i0.wp.com/hughhowey.com/wp-content/uploads/2017/08/beautiful-book-wallpaper-22137-22693-hd-wallpapers.jpg?ssl=1');
+  background-position: center;
+  background-size: cover;
+  padding-top: 35px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a{
+  font-size: 70px;
+  text-decoration: none;
+}
+span{
+  color: #ef9bb6;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  font-size: 25px;
+  margin: 10px 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+}
+nav ul li a:hover{
+  color: #ef9bb6;
+}
+.login{
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+.btn{
+  background: #000;
+  border-radius: 6px;
+  padding: 9px 25px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.content{
+  margin-top: 10%;
+  max-width: 600px;
+}
+.content h2{
+  font-size: 60px
+}
+.content p{
+  margin-top: 10px;
+  line-height: 25px;
+}
+a{
+  color: #fff;
+}
+.link {
+  margin-top: 30px;
+}
+.choose{
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  padding: 9px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.link .choose:hover{
+  background: transparent;
+  border: 1px solid #ef9bb6;
+  color:#ef9bb6;
+}

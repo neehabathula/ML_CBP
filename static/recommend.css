@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+.cards{
+    background-color:#fdebfa;
+    border-radius: 10px;
+  }
+  .card-title{
+    font-family: 'Patua One', cursive;
+  }
+  
+  img{
+    padding-top: 1rem;
+  }
+
+  img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  
+body{
+    background-image: url('https://images6.alphacoders.com/310/310018.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.butn{
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  padding: 3px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  border-style: none;
+  transition: 0.5s;
+}
+.butn:hover{
+  background: transparent;
+  border: 1px solid #ef9bb6;
+  color:#ef9bb6;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.book{
+  font-size: 70px;
+  text-decoration: none;
+}
+li a{
+  color: white;
+  text-decoration: none;
+}
+.logo a{
+  color: white;
+}
+.n_span{
+  color: #ef9bb6;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  font-size: 25px;
+  margin: 5px 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+}
+.book:hover{
+  color: white;
+}
+nav ul li a:hover{
+  color: #ef9bb6;
+}
+.login{
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}

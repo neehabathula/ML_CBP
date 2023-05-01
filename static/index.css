@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+.cards{
+  background-color:#ffffff;
+  height: 73vh;
+  position: relative;
+}
+.card-title{
+  font-family: 'Patua One', cursive;
+}
+.d_span{
+  position: absolute;
+  left:90px;
+  right: 50px;
+  bottom: 10px;
+}
+img{
+  padding-top: 1rem;
+}
+d_span{
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+body{
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/06/22/01/books-2596809_1280.jpg');
+  padding-top: 20px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book{
+  font-size: 70px;
+  text-decoration: none;
+}
+li a{
+  color: white;
+}
+.logo a{
+  color: white;
+}
+.n_span{
+  color: #ef9bb6;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  font-size: 25px;
+  margin: 5px 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+}
+.book:hover{
+  color: white;
+}
+nav ul li a:hover{
+  color: #ef9bb6;
+}
+.login{
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.heading{
+  border:2px solid white;
+}
