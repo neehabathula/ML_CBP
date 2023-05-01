@@ -8,5 +8,5 @@ pip install flask
 5) Enter the following command to run the application:
 python app.py
 6) I dont know if these commands are mandatory but if the app is not working setup the enviroment using the following commands:
-    pip install virtualenv
-    virtualenv env
+i)pip install virtualenv
+ii)virtualenv env
