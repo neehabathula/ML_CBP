@@ -7,3 +7,6 @@ pip install flask
 4) Install pandas, numpy(pip install pandas )
 5) Enter the following command to run the application:
 python app.py
+6) I dont know if these commands are mandatory but if the app is not working setup the enviroment using the following commands:
+    pip install virtualenv
+    virtualenv env
