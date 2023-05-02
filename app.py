@@ -7,6 +7,7 @@ popular_df = pickle.load(open('popular.pkl','rb'))
 pt = pickle.load(open('pt.pkl','rb'))
 # pt = pickle.load(('pt.pkl')
 books = pickle.load(open('books.pkl','rb'))
+avg_ratings = pd.read_pickle('avg_ratings.pkl')
 similarity_scores = pickle.load(open('similarity_scores.pkl','rb'))
 popular_df = pd.DataFrame(popular_df)
 pt = pd.DataFrame(pt)
@@ -42,19 +43,23 @@ def recommend_author():
     ans=[]
     temp_df = books.loc[books['Book-Author'].str.contains(user_input_auth,case=False)]
     temp_df = temp_df[['Book-Title', 'Book-Author' , 'Image-URL-M']]
+    temp_df=temp_df.merge(avg_ratings,on='Book-Title').drop_duplicates('Book-Title')
+    temp_df['Avg-Rating']=round(temp_df['Avg-Rating'],1)
     ans=temp_df.values.tolist()
     list2 = []
     for i in ans:
         if i not in list2:
             list2.append(i)
-    list2=list2[0:10]
+        
+    list2[0:10]
     return render_template('recommend.html',data2=list2)
 
 @app.route('/recommend_books',methods=['post'])
 def recommend():
     user_input = request.form.get('user_input').capitalize()
-    print(user_input)
     res = [i for i in pt.index if user_input in i]
+    print(res)
+    
     data=[]
     similar_books = []
     indexes = set()
@@ -80,14 +85,18 @@ def recommend():
         if item not in output_indices:
             output_indices.append(item)    
     ans=[]
+    df1 =books['Book-Title'].apply
     for j in output_indices:
         item = []
         temp_df = books[books['Book-Title'] == pt.index[j]]
+        temp_df2 = avg_ratings[avg_ratings['Book-Title'] == pt.index[j]]
         item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Title'].values))
         item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Author'].values))
         item.extend(list(temp_df.drop_duplicates('Book-Title')['Image-URL-M'].values))
+        item.extend(list(np.round(temp_df2.drop_duplicates('Book-Title')['Avg-Rating'].values,1)))
+        item.extend(list(temp_df2.drop_duplicates('Book-Title')['Num-Ratings'].values))
         ans.append(item)
-    ans=ans[0:10]
+    ans[0:10]
     return render_template('recommend.html',data=ans)
 
 if __name__ == '__main__':

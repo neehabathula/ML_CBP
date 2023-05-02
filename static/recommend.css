@@ -8,6 +8,7 @@
 .cards{
     background-color:#fdebfa;
     border-radius: 10px;
+    position: relative;
   }
   .card-title{
     font-family: 'Patua One', cursive;
@@ -86,4 +87,11 @@ nav ul li a:hover{
   text-decoration: none;
   margin-right: 15px;
   font-size: 18px;
+}
+
+.d_span{
+  position:absolute;
+  left:50px;
+  right: 50px;
+  bottom: 10px;
 }
